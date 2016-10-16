@@ -1,0 +1,130 @@
+* { 
+  margin:0; padding:0; 
+} 
+
+html, body { 
+  width:100%; 
+  height:100%; 
+}
+
+#myCanvas {
+  position: absolute; 
+  z-index: -1; 
+  width: 100%; 
+  height: 100%;
+}
+
+#logo {
+  padding-top:30px;
+  padding-left:30px;
+  max-height: 30px;
+  max-width: 210px;
+}
+
+#bodycopy {
+position: absolute; 
+left:20%; 
+top: 30%; 
+padding-right: 20%;
+-webkit-animation-duration: 0.5s;
+}
+
+h1 {
+  color: white;
+  font-family: 'Inconsolata', monospace;
+  font-size: 16px;
+  letter-spacing: 5px
+}
+
+p {
+    color: white;
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    line-height: 35px;
+} 
+
+a{
+  color:white;
+}
+a:hover {color: grey;}
+
+a:hover.contact{color: #0000ff;}
+
+a.icon {
+  text-decoration: none;
+}
+#socialmedia{
+  padding-top: 15px;
+}
+.icon-linkedin {
+  padding-right: 10px;
+}
+
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?y1mqcu');
+  src:  url('fonts/icomoon.eot?y1mqcu#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?y1mqcu') format('truetype'),
+    url('fonts/icomoon.woff?y1mqcu') format('woff'),
+    url('fonts/icomoon.svg?y1mqcu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e900";
+}
+.icon-linkedin:before {
+  content: "\e901";
+}
