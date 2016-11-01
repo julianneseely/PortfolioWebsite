@@ -24,37 +24,35 @@ html, body {
 #bodycopy {
 position: absolute; 
 left:20%; 
-top: 30%; 
+top: 35%; 
 padding-right: 20%;
 -webkit-animation-duration: 0.5s;
 }
 
 h1 {
   color: white;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Space Mono', monospace;
   font-size: 16px;
   letter-spacing: 5px
 }
 
 p {
     color: white;
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
-    line-height: 35px;
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    line-height: 30px;
 } 
 
 a{
-  color:white;
+  color: #ffffff;
 }
-a:hover {color: grey;}
-
-a:hover.contact{color: #0000ff;}
 
 a.icon {
   text-decoration: none;
 }
 #socialmedia{
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-left: 2px;
 }
 .icon-linkedin {
   padding-right: 10px;
@@ -127,4 +125,8 @@ a.icon {
 }
 .icon-linkedin:before {
   content: "\e901";
+}
+
+.cls-1 {
+  fill: #ffffff;
 }
