@@ -226,13 +226,13 @@ setInterval(draw_circle, animate_interval_ms);
 
 $(document).ready(function () {
     $(".contact").hover(function () {
-        $("#bodycopy p, #socialmedia a").animate({
+        $("#bodycopy p, #socialmedia a").stop().animate({
                 color: '#d1d1d1'},
                 750);
-        $("#myCanvas").animate({
+        $("#myCanvas").stop().animate({
             opacity: 0},
             750);
-        $("#holler").animate({
+        $("#holler").stop().animate({
             color: main_color
         }, 750);
 
@@ -244,13 +244,13 @@ $(document).ready(function () {
     }
 ,
 function () {
-        $("#bodycopy p, #socialmedia a").animate({
+        $("#bodycopy p, #socialmedia a").stop().animate({
                 color: '#ffffff'},
                 200);
-        $("#myCanvas").animate({
+        $("#myCanvas").stop().animate({
                 opacity: 1},
                 200);
-        $("#holler").animate({
+        $("#holler").stop().animate({
             color: "#ffffff"}, 200);
 
         $('svg').find('.cls-1').stop()
