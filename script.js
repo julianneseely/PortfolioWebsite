@@ -235,10 +235,12 @@ $(document).ready(function () {
         $("#holler").animate({
             color: main_color
         }, 750);
+
         $('svg').find('.cls-1').stop()
-            .animate({'stroke-dashoffset': 0}, 1000)
+            .animate({'stroke-dashoffset': 0}, 750)
             .css({'fill': main_color, 'transition': 'fill 1s'});
     console.log('on');
+
     }
 ,
 function () {
@@ -252,7 +254,7 @@ function () {
             color: "#ffffff"}, 200);
 
         $('svg').find('.cls-1').stop()
-          .animate({'stroke-dashoffset': 900}, 1000)
+          .animate({'stroke-dashoffset': 900}, 200)
           .css({'fill': "#ffffff", 'transition': 'fill 1s'});
     });
  $(".icon").hover(function(){
