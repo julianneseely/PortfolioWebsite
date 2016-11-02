@@ -223,7 +223,6 @@ document.addEventListener('mousemove', function(evt) {
 animate_interval_ms = 33;
 setInterval(draw_circle, animate_interval_ms);
 
-  $("#svg1").style.fill="yellow"
 
 $(document).ready(function () {
     $(".contact").hover(function () {
@@ -236,9 +235,6 @@ $(document).ready(function () {
         $("#holler").animate({
             color: main_color
         }, 750);
-         $(".cls-1").animate({
-            fill: main_color
-        }, 750)
     }
 ,
 function () {
