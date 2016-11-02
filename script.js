@@ -35,7 +35,7 @@ function dynamicCircle(anchor_x, anchor_y, range_x, range_y, start_color, end_co
 
         for(j = 0; j < updates_per_refresh; j++) {
 
-            
+
 
             // drag
             drag_constant = 2;
@@ -112,7 +112,7 @@ function dynamicCircle(anchor_x, anchor_y, range_x, range_y, start_color, end_co
         var ctx = canvas.getContext("2d");
         radius_canvas_cord = .1*canvas.width
 
-        x_center = canvas.width/2 
+        x_center = canvas.width/2
         y_center = canvas.height/2
         // x = x_center + this.range_x*x_percent*canvas.width
         // y = y_center + this.range_y*y_percent*canvas.height
@@ -235,6 +235,10 @@ $(document).ready(function () {
         $("#holler").animate({
             color: main_color
         }, 750);
+        $('svg').find('.cls-1').stop()
+            .animate({'stroke-dashoffset': 0}, 1000)
+            .css({'fill': main_color, 'transition': 'fill 1s'});
+    console.log('on');
     }
 ,
 function () {
@@ -246,7 +250,10 @@ function () {
                 200);
         $("#holler").animate({
             color: "#ffffff"}, 200);
-      
+
+        $('svg').find('.cls-1').stop()
+          .animate({'stroke-dashoffset': 900}, 1000)
+          .css({'fill': "#ffffff", 'transition': 'fill 1s'});
     });
  $(".icon").hover(function(){
         $(this).animate({
@@ -257,5 +264,4 @@ function () {
             color: "#ffffff"
         }, 300)
     });
-   
 });
