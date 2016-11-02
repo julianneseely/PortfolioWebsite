@@ -254,12 +254,12 @@ function () {
             color: "#ffffff"}, 200);
 
         $('svg').find('.cls-1').stop()
-          .animate({'stroke-dashoffset': 900}, 200)
+          .animate({'stroke-dashoffset': 500}, 200)
           .css({'fill': "#ffffff", 'transition': 'fill 1s'});
     });
  $(".icon").hover(function(){
         $(this).animate({
-            color: "#d1d1d1"
+            color: main_color
         }, 300)
     }, function() {
         $(this).animate({
