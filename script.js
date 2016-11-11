@@ -220,10 +220,20 @@ document.addEventListener('mousemove', function(evt) {
         setMousePosPercent(canvas, evt);
 }, false);
 
+var initial_beta = null
+var initial_gamma = null
+
 onDeviceOrientation = function(evt){
+    if(initial_gamma == null){
+        initial_gamma = (event.gamma || 0);
+    }
+    if (initial_beta == null){
+        initial_beta = (event.beta || 0);
+    }
+
     var MAGIC_NUMBER = 30;
-    var y = (event.beta  || 0) / 90; //  -90 :: 90
-    var x = (event.gamma || 0) / 180; // -180 :: 180
+    var y = ((event.beta  || 0) - initial_beta) / 50; //  -90 :: 90
+    var x = ((event.gamma || 0) - initial_gamma) / 70; // -180 :: 180
 
     console.log(event.beta, x, event.gamma, y);
     mouse_pos_percent_x = x
