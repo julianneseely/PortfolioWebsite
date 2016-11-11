@@ -220,6 +220,18 @@ document.addEventListener('mousemove', function(evt) {
         setMousePosPercent(canvas, evt);
 }, false);
 
+onDeviceOrientation = function(evt){
+    var MAGIC_NUMBER = 30;
+    var y = (event.beta  || 0) / 90; //  -90 :: 90
+    var x = (event.gamma || 0) / 180; // -180 :: 180
+
+    console.log(event.beta, x, event.gamma, y);
+    mouse_pos_percent_x = x
+    mouse_pos_percent_y = y
+}
+if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", onDeviceOrientation, true);
+}
 animate_interval_ms = 33;
 setInterval(draw_circle, animate_interval_ms);
 
